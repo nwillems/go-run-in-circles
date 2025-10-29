@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Runner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="register.js"></script>
+</head>
+<body>
+    <h2>Register Runner</h2>
+    <form id="register-form">
+        <label>Bib Number: <input type="text" name="bib_number" required></label><br>
+        <label>Name: <input type="text" name="name" required></label><br>
+        <div>
+            <video id="webcam" width="160" height="120" autoplay playsinline></video>
+            <canvas id="photo-canvas" width="160" height="120" style="display:none;"></canvas>
+            <button type="button" id="capture-btn">Capture Photo</button>
+        </div>
+        <input type="hidden" name="photo" id="photo-data" required>
+        <div id="photo-preview"></div>
+        <button type="submit">Register</button>
+        <span id="register-status"></span>
+    </form>
+    <p><a href="index.html">Back to main</a></p>
+</body>
+</html>

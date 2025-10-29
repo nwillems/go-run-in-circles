@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Embedded Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Lap Tracking System</h1>
+
+    <section>
+        <h2>Register Runner</h2>
+        <a href="register.html">Go to Register Runner Page</a>
+    </section>
+
+    <section>
+        <h2>Record Lap</h2>
+        <form id="lap-form">
+            <label>Bib Number: <input type="text" name="bib_number" required></label>
+            <button type="submit">Record Lap</button>
+            <span id="lap-status"></span>
+        </form>
+        <div>
+            <h3>Or scan barcode</h3>
+            <video id="barcode-video" width="240" height="180" autoplay playsinline></video>
+            <button type="button" id="barcode-scan-btn">Start Barcode Scan</button>
+            <span id="barcode-status"></span>
+        </div>
+    </section>
+    <script src="zxing.min.js"></script>
+
+    <section id="event-setup-section">
+        <h2>Event Setup</h2>
+        <form id="event-setup-form">
+            <label>Event Name: <input type="text" name="name" required></label><br>
+            <label>Start: <input type="datetime-local" name="start" required></label><br>
+            <label>Lap Distance (meters): <input type="number" name="lap_distance" required></label><br>
+            <button type="submit">Create Event</button>
+            <span id="event-setup-status"></span>
+        </form>
+    </section>
+</body>
+</html>
