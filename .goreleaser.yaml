@@ -25,6 +25,13 @@ builds:
     goarch:
       - arm64
       - amd64
+    ignore:
+      - goos: linux
+        goarch: arm64
+      - goos: windows
+        goarch: arm64
+      - goos: darwin
+        goarch: amd64
 
 archives:
   - formats: [zip]
