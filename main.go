@@ -7,8 +7,10 @@ import (
 	"net/http"
 	"os"
 
-	_ "github.com/mattn/go-sqlite3"
+	// _ "github.com/mattn/go-sqlite3"
+
 	"github.com/nwillems/go-run-in-circles/dataaccess"
+	_ "modernc.org/sqlite"
 )
 
 //go:embed web/*
@@ -23,7 +25,7 @@ func main() {
 		dbFile = os.Args[1]
 	}
 	var err error
-	db, err := sql.Open("sqlite3", dbFile)
+	db, err := sql.Open("sqlite", dbFile)
 	if err != nil {
 		log.Fatalf("Failed to open DB: %v", err)
 	}
